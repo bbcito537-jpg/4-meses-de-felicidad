@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#07111f" />
+  <title>4 meses · Una historia que sigue</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <canvas id="world" aria-label="Historia animada"></canvas>
+    <section id="overlay" class="overlay">
+      <div class="eyebrow">22 · 11 · 2026</div>
+      <h1>Una historia que todavía se está escribiendo</h1>
+      <p class="lead">No empezó con una escena perfecta. Empezó con una voz.</p>
+      <button id="startBtn" class="primary">Entrar a nuestra historia</button>
+      <button id="soundBtn" class="ghost" aria-pressed="false">♫ Música</button>
+    </section>
+    <section id="storyUI" class="story-ui hidden">
+      <div id="chapter" class="chapter"></div>
+      <div id="caption" class="caption"></div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <button id="skipBtn" class="mini">Saltar película</button>
+    </section>
+    <section id="letter" class="panel hidden">
+      <div class="paper">
+        <div class="paper-kicker">Para ti</div>
+        <h2>Cuatro meses</h2>
+        <div id="letterBody" class="letter-body">
+          <p>Este espacio es para la carta que voy a escribirte.</p>
+          <p>No quería que apareciera antes de tiempo porque esta parte tiene que sonar a mí, no a una plantilla.</p>
+        </div>
+        <button id="letterNext" class="primary dark">Seguir</button>
+      </div>
+    </section>
+    <section id="memory" class="panel hidden">
+      <div class="memory-shell">
+        <div class="eyebrow">Interludio</div>
+        <h2>Constelación de coincidencias</h2>
+        <p>Toca los hilos. Cada uno conecta dos momentos que parecían separados.</p>
+        <canvas id="memoryCanvas"></canvas>
+        <div id="memoryText" class="memory-text">Hay historias que no empiezan con una señal. Empiezan con muchas pequeñas.</div>
+        <button id="memoryNext" class="primary">Abrir la última puerta</button>
+      </div>
+    </section>
+    <section id="escape" class="panel hidden">
+      <div class="escape-shell">
+        <div class="escape-top"><span>TZUYU.exe</span><span id="roomStatus">Habitación 01</span></div>
+        <canvas id="escapeCanvas"></canvas>
+        <div id="escapeHUD" class="escape-hud"></div>
+        <div id="inventory" class="inventory"></div>
+      </div>
+    </section>
+    <section id="finale" class="panel hidden">
+      <div class="finale-shell">
+        <div id="finaleArt" class="finale-art"></div>
+        <div class="eyebrow">Sorpresa completada</div>
+        <h2>Todo esto era para sacarte un ratito del mundo.</h2>
+        <p>Tzuyu nunca desapareció. Yo tampoco. Solo necesitábamos una excusa ridículamente complicada para llegar hasta aquí.</p>
+        <div class="gift-card">
+          <div class="bracelet black-red" aria-label="Pulsera negra y roja"><span class="charm">♡</span></div>
+          <div class="bracelet white-pink" aria-label="Pulsera blanca y rosa"><span class="charm">♡</span></div>
+        </div>
+        <h3>Y todavía falta el regalo de verdad.</h3>
+        <p class="ending">Una historia que todavía se está escribiendo.</p>
+      </div>
+    </section>
+  </main>
+  <script src="data.js"></script>
+  <script src="characters.js"></script>
+  <script src="effects.js"></script>
+  <script src="music.js"></script>
+  <script src="scene-engine.js"></script>
+  <script src="scenes.js"></script>
+  <script src="memories.js"></script>
+  <script src="escape.js"></script>
+  <script src="finale.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
